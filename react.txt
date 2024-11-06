@@ -1,0 +1,154 @@
+1) import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+class Header extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={favoritecolor:"red"};
+    }
+render(){
+  return(
+    <h1>My favorite Color is {this.state.favoritecolor}</h1>
+  );
+}
+}
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header favcol ="Yellow"/>);
+
+
+
+2) import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+class Header extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={favoritecolor:"red"};
+    }
+    componentDidMount(){
+      setTimeout(()=>{
+        this.setState({favoritecolor:"Yellow"})
+      },1000)
+    }
+render(){
+  return(
+    <h1>My favorite Color is {this.state.favoritecolor}</h1>
+  );
+}
+}
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header/>);
+
+
+
+
+3) 
+4) package com.example.demo;
+import java.util.*;
+	public class Main{
+	public static void main(String args[]){
+      List<String> mySubjects=new ArrayList <>();
+   mySubjects.add("java");
+   mySubjects.add("Spring");
+   System.out.println("My Subjects:");
+  for(String subject:mySubjects){
+	   System.out.println(subject);
+   }
+  }
+}
+
+
+5) package com.example.demo;
+import java.util.*;
+	public class Main{
+	public static void main(String args[]){
+      Set<String> mySubjects=new HashSet <>();
+   mySubjects.add("java");
+   mySubjects.add("Spring");
+   System.out.println("My Subjects:");
+  for(String subject:mySubjects){
+	   System.out.println(subject);
+   }
+  }
+}
+
+package com.example.demo;
+import java.util.*;
+	public class Main{
+	public static void main(String args[]){
+     Map<Integer,String> mySubjects=new HashMap <Integer,String>();
+   mySubjects.put(1,"java");
+   mySubjects.put(2,"Spring");
+    for(Map.Entry subject:mySubjects.entrySet())
+	   System.out.println(subject.getKey()+"-"+subject.getValue());
+   }
+  }
+
+7)package com.example.demo;
+import java.util.*;
+	public class Main{
+	public static void main(String args[]){
+      List<String> mySubjects=new ArrayList <>();
+   mySubjects.add("java");
+   mySubjects.add("Spring");
+   System.out.println("My Subjects:");
+  for(String subject:mySubjects){
+	   System.out.println(subject);
+   }
+  
+  Set<String> Subjects=new HashSet <>();
+  Subjects.add("java");
+  Subjects.add("Spring");
+  System.out.println("My Subjects:");
+ for(String subject:Subjects){
+	   System.out.println(subject);
+  }
+
+ Map<Integer,String>mySubject=new HashMap <Integer,String>();
+ mySubject.put(1,"java");
+ mySubject.put(2,"Spring");
+  for(Map.Entry subject:mySubject.entrySet())
+	   System.out.println(subject.getKey()+"-"+subject.getValue());
+ }
+}
+	
+
+4)package com.firstSpring;
+
+    import org.springframework.org.beans.factory.BeanFactory;
+	import org.springframework.org.beans.factory.xml.XmlBeanFactory;
+	import org.springframework.org.core.io.ClassPathResource;
+	import org.springframework.org.core.io.Resource;
+	public class Test{
+		Resource resource=new ClassPathResource(app.xml);
+		BeanFactory factory=new XmlBeanFactory(resource);
+		Student student=(Student)Factory.getBean(studentBean);
+		student.displayInfo();
+
+
+
+ 7)  package com.example.demo;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class Controller {
+	@GetMapping("/hello")
+	public String sayHello() {
+		return "welcome";
+	}
+
+}
+
+
+8) spring.application.name=demo
+spring.security.user.name=sushma
+spring.security.user.password=sneha
+server.port=1010
+	
+	
+       
+        
+        
+       
